@@ -62,7 +62,7 @@ a:hover { text-decoration: underline; }
 }
 
 .nav-left a {
-  margin-right: 16px;         /* spacing between Home & About */
+  margin-right: 24px;         /* spacing between Home & About */
 }
 
 .nav-right a,
