@@ -1,5 +1,5 @@
 // Shared JS for simple static auth + state (NOT secure; demo only)
-const WORK_EMAIL = "goreandcaro@yourdomain.com";
+const WORK_EMAIL = "InkSpectors@gmail.com";
 
 // Helpers
 function $(sel, root=document) { return root.querySelector(sel); }
