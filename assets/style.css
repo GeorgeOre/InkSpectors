@@ -41,7 +41,7 @@ a:hover { text-decoration: underline; }
   position: sticky; top:0;
   border-bottom: 1px solid var(--border);
 }
-.brand { display:flex; align-items:center; gap:12px; font-weight: 800; letter-spacing: .2px; }
+.brand { display:flex; align-items:center; gap:6px; font-weight: 800; letter-spacing: .2px; }
 .badge {
   font-size: 12px; background: #eef3ff; padding: 4px 10px; border-radius: 999px;
   color: var(--muted); border: 1px solid var(--border);
