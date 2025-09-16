@@ -50,7 +50,26 @@ a:hover { text-decoration: underline; }
   font-size: 12px; background: #eef3ff; padding: 4px 10px; border-radius: 999px;
   color: var(--muted); border: 1px solid var(--border);
 }
-.nav a { margin-left: 16px; }
+
+/* Navigation bar links */
+/* .nav a { margin-left: 16px; } OLD VERSION ALL RIGHT*/
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex: 1;                    /* take up available space */
+  justify-content: space-between;
+  margin-left: 24px;          /* spacing between brand and first links */
+}
+
+.nav-left a {
+  margin-right: 16px;         /* spacing between Home & About */
+}
+
+.nav-right a,
+.nav-right button {
+  margin-left: 16px;          /* spacing between login/dashboard/logout */
+}
+
 
 /* Cards turn white with soft border/shadow */
 .card {
