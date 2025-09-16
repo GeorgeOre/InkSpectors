@@ -26,7 +26,7 @@ html, body {
 }
 
 /* Links */
-a { color: var(--accent); text-decoration: none; }
+a { color: var(--text); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* Layout */
