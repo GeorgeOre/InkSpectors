@@ -164,3 +164,12 @@ footer {
 
 /* Separator */
 hr.sep { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }
+
+/* About banner */
+.about-banner {
+  width: 100%;         /* full container width */
+  max-height: 300px;   /* optional cap on height */
+  object-fit: cover;   /* crop instead of squish */
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+}
