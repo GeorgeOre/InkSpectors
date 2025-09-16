@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Intake Form</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <script defer src="../assets/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => requireAuth());
+  </script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">
+    <span style="font-size:22px">✍️</span>
+    <span>Essay Mentorship</span>
+    <span class="badge">Gore × Caro</span>
+  </div>
+  <nav>
+    <a href="../../">Home</a>
+    <a href="../../about/">About Us</a>
+    <a id="dashBtn" class="btn ghost" href="../../dashboard/">Dashboard</a>
+    <a id="loginBtn" class="btn" href="../../login/">Log in</a>
+    <button id="logoutBtn" class="btn danger" type="button">Log out</button>
+  </nav>
+</header>
+
+  <main class="container">
+    <h1 class="h1">Mentee Intake Form</h1>
+    <form id="intakeForm" class="card">
+      <div class="grid">
+        <div>
+          <label>Full name</label>
+          <input class="input" name="fullname" type="text" required/>
+        </div>
+        <div>
+          <label>Email</label>
+          <input id="email" class="input" name="email" type="email" required/>
+        </div>
+        <div>
+          <label>School</label>
+          <input class="input" name="school" type="text"/>
+        </div>
+        <div>
+          <label>Grade</label>
+          <select name="grade">
+            <option value="">—</option>
+            <option>9</option><option>10</option><option>11</option><option>12</option><option>Gap</option>
+          </select>
+        </div>
+        <div>
+          <label>Service needed</label>
+          <select name="service" required>
+            <option>College personal essay</option>
+            <option>Supplements</option>
+            <option>Fly‑in programs</option>
+            <option>Scholarships</option>
+          </select>
+        </div>
+        <div>
+          <label>Document type</label>
+          <input class="input" name="docType" placeholder="e.g., Personal Statement, UC PIQ #2"/>
+        </div>
+        <div>
+          <label>Google Doc link</label>
+          <input class="input" name="docLink" type="url" placeholder="https://docs.google.com/..."/>
+        </div>
+        <div>
+          <label>Deadlines</label>
+          <input class="input" name="deadlines" placeholder="e.g., EA 11/1, RD 1/1"/>
+        </div>
+      </div>
+      <label>Interests / background / any notes</label>
+      <textarea class="input" name="notes" rows="6" placeholder="Tell us what makes you, you."></textarea>
+      <div style="display:flex; gap:10px; margin-top:14px;">
+        <button class="btn success" type="submit">Send & draft email</button>
+        <a class="btn ghost" href="../dashboard/">Back to dashboard</a>
+      </div>
+      <p class="help" style="margin-top:10px">Submitting will open your email client to send us a copy at <strong>goreandcaro@yourdomain.com</strong>. We’ll confirm via email.</p>
+    </form>
+  </main>
+
+<footer>
+  <div>© 2025 Gore & Caro — Essay Mentorship. All rights reserved.</div>
+  <div class="mono">Demo build. Front‑end only. Replace work email in <code>assets/app.js</code>.</div>
+</footer>
+
+</body>
+</html>

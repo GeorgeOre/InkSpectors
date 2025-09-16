@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <script defer src="../assets/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => requireAuth());
+  </script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">
+    <span style="font-size:22px">✍️</span>
+    <span>Essay Mentorship</span>
+    <span class="badge">Gore × Caro</span>
+  </div>
+  <nav>
+    <a href="../../">Home</a>
+    <a href="../../about/">About Us</a>
+    <a id="dashBtn" class="btn ghost" href="../../dashboard/">Dashboard</a>
+    <a id="loginBtn" class="btn" href="../../login/">Log in</a>
+    <button id="logoutBtn" class="btn danger" type="button">Log out</button>
+  </nav>
+</header>
+
+  <main class="container">
+    <h1 class="h1">Your Dashboard</h1>
+
+    <section id="submissionGate" class="card">
+      <div class="h2">Let’s get started</div>
+      <p>You haven’t submitted your intake form yet. Please fill it out so we can match you with the right mentor.</p>
+      <a class="btn primary" href="../form/">Go to intake form</a>
+    </section>
+
+    <section id="docsCard" class="card" style="display:none;">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:12px;">
+        <div>
+          <div class="h2" style="margin:0;">Your documents</div>
+          <small class="help">Track each doc’s current status.</small>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <button id="addDocBtn" class="btn">Add Sample Doc</button>
+          <a class="btn ghost" href="../form/">Edit intake form</a>
+        </div>
+      </div>
+      <div style="overflow:auto; margin-top:12px;">
+        <table id="docsTable" class="table">
+          <thead>
+            <tr><th>Title</th><th>Status</th><th>Updated</th><th>Change status</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div style="margin-top:12px;">
+        <small class="help">Statuses: <span class="badge">pending mentor review</span> or <span class="badge">pending mentee review</span>.</small>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="h2">Submission status</div>
+      <p><strong>Form submitted:</strong> <span class="mono">{}</span><script>document.currentScript.previousSibling.textContent = JSON.stringify(!!localStorage.getItem('formSubmitted'));</script></p>
+    </section>
+  </main>
+
+<footer>
+  <div>© 2025 Gore & Caro — Essay Mentorship. All rights reserved.</div>
+  <div class="mono">Demo build. Front‑end only. Replace work email in <code>assets/app.js</code>.</div>
+</footer>
+
+</body>
+</html>
