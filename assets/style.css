@@ -42,6 +42,10 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--border);
 }
 .brand { display:flex; align-items:center; gap:1px; font-weight: 800; letter-spacing: .2px; }
+.brand span {
+  font-size: 1.6rem;   /* roughly 25–26px */
+  font-weight: 800;    /* keep it bold if you want it to stand out */
+}
 .badge {
   font-size: 12px; background: #eef3ff; padding: 4px 10px; border-radius: 999px;
   color: var(--muted); border: 1px solid var(--border);
